@@ -33,9 +33,40 @@
                 console.log(str[i]);
             }
         }
+
+        function removeVowels(str) {
+            let result = '';
+            const vowels = 'aeiou';
+            for (let i = 0; i < str.length; i++) {
+                const ltr = str[i];
+                if (vowels.indexOf(ltr) === -1) {
+                    // if (ltr[i] !== 'a' && ltr[i] !== 'e' && ltr[i] !== 'i' && ltr[i] !== 'o' && ltr[i] !== 'u') {
+                    result = result + ltr;
+                }
+            }
+            return result;
+        }
+
+        function vowelCount(str) {
+            let result = 0;
+            const vowels = 'aeiou';
+            for (let i = 0; i < str.length; i++) {
+                const ltr = str[i];
+                if (vowels.indexOf(ltr) !== -1) {
+                    // if (ltr[i] !== 'a' && ltr[i] !== 'e' && ltr[i] !== 'i' && ltr[i] !== 'o' && ltr[i] !== 'u') {
+                    //result = result + ltr;
+                    result++
+                }
+            }
+            return result;
+        }
         // countUp(10);
         // countDown(10);
-        wordLoop('bar');
+        // wordLoop('bar');
+        //const result = removeVowels('baaz');
+        //console.log(result);
+        console.log(vowelCount('foo'));
+        console.log(vowelCount('bar'));
 
     </script>
 </body>
